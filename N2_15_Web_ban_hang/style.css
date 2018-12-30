@@ -1,0 +1,85 @@
+.search{
+
+		margin-left: 10%;
+		width: 30%;
+		height: 37px;
+	}
+	.iconSearch{
+		right: 40%;
+		font-size: 37px;
+	}
+	.btn {
+		height: 37px;
+	    border: none;
+	    outline: none;
+	    padding: 12px 16px;
+	    background-color: #f1f1f1;
+	    cursor: pointer;
+	}
+
+	.btn:hover {
+   		background-color: #ddd;
+	}
+
+	.btn.active {
+	    background-color: #666;
+	    color: white;
+	}
+	.change{
+		float: left;
+		width: 8%;
+		height: 37px;
+	}
+	.column {
+    float: left;
+    padding: 10px;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.active {
+    background-color: #666;
+}
+.lead{
+	font-size: 20px;
+}
+		#bot{
+			text-align: center;
+			color: red;
+		}
+		#mainqc{			
+			position: fixed;
+			right: 1px;
+			bottom: 0px;
+			width: 370px;
+		}
+		#tatqc, #moqc{			
+			padding: 5px;
+			width: 100%;
+			background: teal;
+			text-align: center;
+
+		}
+		#moqc{
+			display: none;
+		}
+.float-none{
+	float: none;
+}
+a:link {
+  color: red;
+}
+
+
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}

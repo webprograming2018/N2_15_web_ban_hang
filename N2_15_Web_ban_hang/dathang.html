@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>S&T</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="w3-css.css" type="text/css">
+	<link rel="stylesheet" href="bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="awesome.css" type="text/css">
+</head>
+<body>
+	<div class="w3-container" style="padding: 0px; margin-left:40%; margin-right: 33%; background: #E7EAED">
+			<div class="column">
+				<div><img id="myImage" style="margin-left: 15px" src="picture/ex1.jpg" height="450px" width="300px" alt=""></div>	
+				<div>
+					<br>
+			Họ tên: <input style="margin-left:12px" type="text" id="name" value="" /> <br>
+    		<br>
+    		Địa chỉ: <input style="margin-left:12px" type="text" id="address" value="" /> <br>
+    		<br>
+    		SDT: <input style="margin-left:27px" type="text" id="numberphone" value="" /><br>
+    		<br>
+    		Số lượng: <input style="margin-left:0px" type="text" id="number" value=""/><br>
+    		<br>
+    		<button onclick="document.getElementById('myImage').src='picture/ex2.jpg'">MÀU ĐEN</button>
+			<button onclick="document.getElementById('myImage').src='picture/ex3.jpg'">MÀU CAM</button>
+			<button onclick="document.getElementById('myImage').src='picture/ex1.jpg'">MÀU TRẮNG</button>
+			<br><br>
+    		<p>Bạn chọn:</p>
+    			<select class="change"  style="width:100px" name="changeColor" id="changeColor" >
+				<option value="màu đen">màu đen</option>
+				<option value="màu cam">màu cam</option>
+				<option value="màu trắng">màu trắng</option>
+			</select>
+    		<br><br>
+    		<p>Size:</p>
+    			<select class="change"  style="width:100px" name="changeSize" id="changeSize">
+				<option value="S">S</option>
+				<option value="M">M</option>
+				<option value="L">L</option>
+			</select>
+    		
+				</div>
+     <br>	
+	<div id="bot"> 
+	    	<p class="w3-button w3-teal w3-large" onclick="tinh()" href="#">Mua ngay</p> 
+      </div> 
+	</div>  
+	<script>
+		var color;
+		var size;
+		var number;
+		var ten;
+		var address;
+		var numberphone;
+		var sum;
+		function tinh(){
+			color= document.getElementById("changeColor");
+			size = document.getElementById("changeSize"); 
+			ten = document.getElementById("name");
+			address = document.getElementById("address");
+			numberphone = document.getElementById("numberphone");
+			number = document.getElementById("number");
+			sum =  parseInt(number.value) * 200000;
+			alert("Chúc mừng khách hàng: "+ten.value+" đã đặt hàng thành công!\nThông tin khách hàng:"+"\nHọ tên: "+ten.value+"\nĐịa chỉ: "+address.value+"\nSĐT: "+numberphone.value+" \nThông tin sản phẩm: NMD_R1 SHOES\nSize: "+size.value+"\nMàu sắc: "+color.value+"\nSố lượng: "+number.value+"\nTổng tiền: "+sum+" đồng");
+
+		}	
+	</script>
+</body>
+</html>

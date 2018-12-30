@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>S&T</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="w3-css.css" type="text/css">
+	<link rel="stylesheet" href="bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="awesome.css" type="text/css">
+</head>
+<body>
+	<div id = "mausac" >
+	<div class="w3-container" style="margin-top: 5px; background: teal">
+		<div style="padding-top: 10px; padding-bottom: 0px;">
+			<select class="change"  style=" background: #8A9DA1" name="changeColor" id="changeColor" onchange="Change()">
+				<option value="red">red</option>
+				<option value="teal">teal</option>
+				<option value="orange">orange</option>
+			</select>
+		</div>
+		<div >
+			<select class="change" style="width:12%; background: #8A9DA1"  name="changeFont" id="changeFont" onchange="ChangeFont()">
+				<option value="Times New Roman">Times New Roman</option>
+				<option value="Arial">Arial</option>
+				<option value="Algerian">Algerian</option>
+			</select>
+		</div>
+		<input style="position: fixed" type="text" placeholder="search something..." class="search" ></input> 
+		<a href="#" style="position: fixed; font-size: 30px" class="fa fa-search iconSearch"></a>		
+		    	<div class="w3-container" style="float:right" id="idDate"></div>
+	</div>
+	<div class="w3-container" style="background: #8A9DA1; height: 60px; width: 100%; margin-top: 0px;">		 
+		<div style="right: 200px;">
+			<a> <h1 style="color:#7FFF00; font-family: Algerian; float: right;">ST Store</h1></a>
+			<a href="#"  style="padding-top:20px; font-size: 20px;" class="w3-bar-item w3-button"><strong>Trang chủ</strong></a>
+			<div class="w3-dropdown-hover">
+				<button style="padding-top:20px; font-size: 20px;" class="w3-button">Áo Nam<i class="fa fa-caret-down"></i></button>
+				<div class="w3-dropdown-content w3-bar-block">
+					<a href="#" class="w3-bar-item w3-button">Áo khoác</a>
+					<a href="#" class="w3-bar-item w3-button"> Áo Sơ mi</a>
+					<a href="#" class="w3-bar-item w3-button">Áo Phông</a>
+				</div>			
+			</div>
+			<div class="w3-dropdown-hover">
+				<button style="padding-top:20px; font-size: 20px" class="w3-button">Quần<i class="fa fa-caret-down"></i></button>
+				<div class="w3-dropdown-content w3-bar-block">
+					<a href="#" class="w3-bar-item w3-button">Quần jeans</a>
+					<a href="#" class="w3-bar-item w3-button">Quần âu</a>
+					<a href="#" class="w3-bar-item w3-button">Quần short</a>
+				</div>			
+			</div>
+			<div class="w3-dropdown-hover">
+				<button style="padding-top:20px; font-size: 20px" class="w3-button">Giày<i class="fa fa-caret-down"></i></button>
+				<div class="w3-dropdown-content w3-bar-block">
+					<a href="#" class="w3-bar-item w3-button" onclick="hienThiGiayTheThao()">Giày thể thao</a>
+					<a href="#" class="w3-bar-item w3-button" onclick="hienThiGiayDa()"> Giày da</a>
+				</div>			
+			</div>
+			<div class="w3-dropdown-hover">
+				<button style="padding-top:20px; font-size: 20px;" class="w3-button">Hãng<i class="fa fa-caret-down"></i></button>
+				<div class="w3-dropdown-content w3-bar-block">
+					<a href="#" class="w3-bar-item w3-button" onclick="chonHangAdidas()">Adidas</a>
+					<a href="#" class="w3-bar-item w3-button" onclick="chonHangNike()">Nike</a>
+					<a href="#" class="w3-bar-item w3-button" onclick="chonHangUntraboot()">Untraboot</a>
+				</div>			
+			</div>
+			<a href="ex.html" taget="_blank" style="padding-top:20px; font-size: 20px" class="w3-bar-item w3-button">Thử quần áo</a>				
+		</div>
+	</div>
+	<div class="w3-container">
+		<div>
+			<img src="picture/s1.jpg" alt="" style="width: 100%; height: 800px">			
+		</div>
+		<div style="background: #8A9DA1; height: 50px; width: 100%; margin-top:10px">			
+			<div id="btnContainer" style="padding-top: 8px; margin-left: 10px">			
+				<button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+				<button class="btn active " onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+			</div>			
+		</div>		 
+		<div class="w3-container" style="padding: 0px; margin-left:15px; background: #E7EAED">
+			<div class="column adidas">
+				<div><img src="picture/ex1.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="chitiet.html">Chi tiết</a> 
+	    	<a href="dathang.html" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>  
+			<div class="column nike">
+				<div><img src="picture/p9.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column adidas">
+				<div><img src="picture/p10.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column nike">
+				<div><img src="picture/p3.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column adidas">
+				<div><img src="picture/p10.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column nike thethao">
+				<div><img src="picture/p11.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column untraboot da" >
+				<div><img src="picture/p12.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column adidas thethao">
+				<div><img src="picture/p13.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column nike da">
+				<div><img src="picture/p14.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column adidas">
+				<div><img src="picture/p7.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column untraboot">
+				<div><img src="picture/p8.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column nike">
+				<div><img src="picture/p6.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column untraboot">
+				<div><img src="picture/p5.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column nike">
+				<div><img src="picture/p10.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column nike">
+				<div><img src="picture/p8.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column nike">
+				<div><img src="picture/p6.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column nike">
+				<div><img src="picture/p13.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column nike">
+				<div><img src="picture/p9.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+			<div class="column nike">
+				<div><img src="picture/p11.jpg" height="400px" width="300px" alt=""></div>
+				<div id="bot"> 
+           <p class="lead"> 200.000 đ  </p> 
+	    	<a class="w3-button w3-teal w3-large" href="#">Chi tiết</a> 
+	    	<a href="#" ><img src="picture/images.png" height="40" width="40"  alt="đây là ảnh"> </a>
+      </div> 
+			</div>
+		</div>
+		<!--quang cáo -->
+		<div class="w3-container w3-teal" >
+		<div id="mainqc">
+			<div id="tatqc" style="text-align: right">
+				<a  href="#" onclick="hide()" style="color: white">Tắt X</a>
+			</div>
+			<div 
+			id="picqc">
+				<a href="sale.html" target="_self"> <img src="picture/sale.jpg" height="240" width="370" alt=""></a>
+			</div>
+			<div id="moqc" style="color: white">
+				<a href="#" onclick="show()" style="color: white">Mở khuyển mại</a>
+			</div>
+		</div>
+		</div>
+	</div>
+	 <footer class="footer_area" style="background: black">
+        <div class="container">
+            <div class="footer_row row">
+                <div class="col-md-3 col-sm-6 footer_about">
+                    <h2>Shop chúng tôi</h2>
+                    <a> <h2 style="color:#7FFF00; font-family: Algerian;">ST Store</h2></a>
+                </div>
+                <div class="col-md-3 col-sm-6 footer_about quick">
+                    <h2>Quick links</h2>
+                    <ul class="quick_link">
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Các mặt hàng được yêu thích</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Sản phẩm bán chạy nhất</a></li>      
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Sản phẩm của Mỹ</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Sản phẩm của Đức</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Xem nhiều hơn nữa</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer_about">
+                    <h2>Twitter Feed</h2>
+                    <a href="#" class="twitter">Chúng tôi luôn làm việc với phương trâm khách hàng là thượng đế</a>
+                </div>
+                <div class="col-md-3 col-sm-6 footer_about">
+                    <h2>CONTACT US</h2>
+                    <address>
+                        <ul class="my_address">
+                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>STShop.com</a></li>
+                            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>01686566020</a></li>
+                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>số 1, đường nguyễn trãi, thanh xuân, hà nội. </span></a></li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="copyright_area">
+            Copyright 2018 All rights reserved. Designed by <a href="https://colorlib.com">Sơn & Tiến</a>
+        </div>
+    </footer>
+	<script>
+		function dateTime(){
+			var d= new Date();
+			var day= ["chủ nhật", "thứ hai", "thứ ba", "thứ ba", "thứ tư", "thứ năm", "thứ sáu", "thứ bảy"];
+			var month=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+			document.getElementById("idDate").innerHTML="Hôm nay, "+day[d.getDay()]+" ngày "+d.getDate()+" tháng "+month[d.getMonth()]+" năm "+d.getFullYear();
+		}
+		dateTime();
+		function Change(){
+			var colors = document.getElementById("changeColor");
+			document.getElementById("mausac").style.background = colors.value;
+		}		
+
+		function ChangeFont(){
+			var font = document.getElementById("changeFont");
+			document.getElementById("mausac").style.fontFamily = font.value;
+		}	
+
+		//chọn hãng sản xuất
+		var listAdidas = document.getElementsByClassName("column adidas");
+		var listUntraboot = document.getElementsByClassName("column untraboot");
+		var listNike = document.getElementsByClassName("column nike");
+		var i;
+		//chon hang nike
+		function chonHangNike(){
+			for (i = 0; i < listNike.length; i++) {
+    		listNike[i].style.display = "block";
+  			}
+  			for (i = 0; i < listUntraboot.length; i++) {
+    		listUntraboot[i].style.display = "none";
+  			}
+  			for (i = 0; i < listAdidas.length; i++) {
+    		listAdidas[i].style.display = "none";
+  			}
+		}
+		//chon hang untraboot
+		function chonHangUntraboot(){
+			for (i = 0; i < listNike.length; i++) {
+    		listNike[i].style.display = "none";
+  			}
+  			for (i = 0; i < listUntraboot.length; i++) {
+    		listUntraboot[i].style.display = "block";
+  			}
+  			for (i = 0; i < listAdidas.length; i++) {
+    		listAdidas[i].style.display = "none";
+  			}
+		}
+		//chon hang adidas
+		function chonHangAdidas(){
+			for (i = 0; i < listNike.length; i++) {
+    		listNike[i].style.display = "none";
+  			}
+  			for (i = 0; i < listUntraboot.length; i++) {
+    		listUntraboot[i].style.display = "none";
+  			}
+  			for (i = 0; i < listAdidas.length; i++) {
+    		listAdidas[i].style.display = "block";
+  			}
+		}
+				//hiển thị giày thể thao
+		var elements = document.getElementsByClassName("column");
+		function hienThiGiayTheThao(){
+			for (i = 0; i < elements.length; i++) {
+    			elements[i].style.display = "none";
+  			}
+  			var listGiayTheThao = document.getElementsByClassName("thethao");
+  			for(i=0; i<listGiayTheThao.length; i++){
+  				listGiayTheThao[i].style.display="block";
+  			}			
+		}
+		//hiển thị giày da
+		function hienThiGiayDa(){
+			for (i = 0; i < elements.length; i++) {
+    			elements[i].style.display = "none";
+  			}
+  			var listGiayDa = document.getElementsByClassName("da");
+  			for(i=0; i<listGiayDa.length; i++){
+  				listGiayDa[i].style.display="block";
+  			}			
+		}
+	</script>
+
+<script>
+var elements = document.getElementsByClassName("column");
+var i;
+//list view
+function listView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.float = "none";
+  }
+}
+
+// Grid View
+function gridView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.float = "left";
+  }
+  
+}
+
+
+var container = document.getElementById("btnContainer");
+var btns = document.getElementsByClassName("btn");
+
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<<script>
+	function hide(){
+			document.getElementById('tatqc').style.display="none";
+			document.getElementById('picqc').style.display="none";
+			document.getElementById('moqc').style.display="block";
+		}
+		function show(){
+			document.getElementById("tatqc").style.display="block";
+			document.getElementById("picqc").style.display="block";
+			document.getElementById("moqc").style.display="none";
+		}
+</script>
+</body>
+</html>
